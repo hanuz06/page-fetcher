@@ -9,16 +9,8 @@ let fetcher = data => {
 
   //Checking if the local file path is valid
   if ('./index.html' !== data[1]) {
-    let rightPath = [];
-    let inputPath = [];
-    rightPath = './index.html'.split('');
-    inputPath = data[1].split('');
-    for (let char in rightPath) {
-      if (rightPath[char] !== inputPath[char] || './index.html'.length !== data[1].length) {
-        console.log('Please check local file path first');
-        return;
-      }
-    }
+    console.log('Please check local file path first');
+    return;
   }
 
   // Validating URL address
